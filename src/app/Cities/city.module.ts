@@ -14,9 +14,9 @@ import { CityComponent } from './city-list.component';
   ],
   imports: [
     RouterModule.forChild([
-      { path: 'cities', component: CityComponent },
+      { path: 'Cities', component: CityComponent },
       {
-        path: 'cities/:id',
+        path: 'Cities/:id',
         canActivate: [CityDetailGuard],
         component: CityDetailComponent
       }

@@ -32,6 +32,6 @@ export class CityDetailComponent implements OnInit {
   }
 
   onBack(): void {
-    this.router.navigate(['/cities']);
+    this.router.navigate(['/Cities']);
   }
 }

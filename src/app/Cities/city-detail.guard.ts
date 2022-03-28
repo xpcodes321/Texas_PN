@@ -8,14 +8,14 @@ import { Observable } from 'rxjs';
 export class CityDetailGuard implements CanActivate {
 
   constructor(private router: Router) {}
-  
+
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     const id = Number(route.paramMap.get('id'));
     if (isNaN(id) || id < 1) {
       alert('Invalid City');
-      this.router.navigate(['/cities']);
+      this.router.navigate(['/Cities']);
       return false;
     }
     return true;
