@@ -1,0 +1,68 @@
+<div class='card'>
+  <div class='card-header'>
+    {{pageTitle}}
+  </div>
+  <div class='card-body'>
+    <div class='row'>
+      <div class='col-md-2'>Filter by:</div>
+      <div class='col-md-4'>
+        <input [(ngModel)]='listFilter'
+               type='text'/>
+      </div>
+    </div>
+    <div class='row'
+         *ngIf='listFilter'>
+      <div class='col-md-6'>
+        <h4>Filtered by: {{listFilter}}</h4>
+      </div>
+    </div>
+    <div class='table-responsive'>
+      <table class='table'
+             *ngIf='Cities.length'>
+        <thead>
+          <tr>
+            <th>
+              <button class='btn btn-primary'
+                      (click)='toggleImage()'>
+                {{showImage ? 'Hide' : 'Show'}} Image
+              </button>
+            </th>
+            <th>City</th>
+            <th>Year</th>
+            
+            <th>Population</th>
+            <th>Star Rating</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor='let city of filteredCity'>
+            <td>
+              <img *ngIf='showImage'
+                   [src]='city.imageUrl'
+                   [title]='city.City'
+                   [style.width.px]='imageWidth'
+                   [style.margin.px]='imageMargin'>
+            </td>
+            <td>
+              <a [routerLink]="['/Cities', city.CityList]">
+                {{ city.City }}
+              </a>
+            </td>
+            <td>{{ city.CensusYear | lowercase | convertToSpaces:'-' }}</td>
+           
+            <td>{{ city.Population| number: '0.0-0' }}</td>
+            <td>
+              <pm-star [rating]='city.starRating'
+                       (ratingClicked)='onRatingClicked($event)'>
+              </pm-star>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<div *ngIf='errorMessage'
+     class='alert alert-danger'>
+  Error: {{ errorMessage }}
+</div>

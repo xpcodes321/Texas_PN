@@ -1,0 +1,47 @@
+[
+    {
+      "CityList": 1,
+      "City": "Dallas",
+      "CensusYear": "2020",
+      "description": "Third Populated City in Texas",
+      "Population ": 20.00,
+      "starRating": 5,
+      "imageUrl": "assets/images/dallas.jpg"
+    },
+    {
+      "CityList": 2,
+      "City": "Houston",
+      "CensusYear": "2020",
+      "description": "Biggest Populated City in Texas",
+      "Size": 32.99,
+      "starRating": 4.5,
+      "imageUrl": "assets/images/houston.jpg"
+    },
+    {
+      "CityList": 5,
+      "City": "Austin",
+      "CensusYear": "2020",
+      "description": "Fourth Populated City in Texas",
+      "Population ": 8.9,
+      "starRating": 4.8,
+      "imageUrl": "assets/images/austin.jpg"
+    },
+    {
+      "CityList": 8,
+      "City": "San Antonio",
+      "CensusYear": "2020",
+      "description": "Second Populated City in Texas",
+      "Size": 1434544,
+      "starRating": 3.7,
+      "imageUrl": "assets/images/SA.jpg"
+    },
+    {
+      "CityList": 10,
+      "City": "Corpus Christi",
+      "CensusYear": "2020",
+      "description": "Eighth Populated City in Texas",
+      "Size": 35.95,
+      "starRating": 4.6,
+      "imageUrl": "assets/images/corpus-christi.jpg"
+    }
+  ]
